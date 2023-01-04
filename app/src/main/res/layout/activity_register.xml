@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".register"
+    android:theme="@style/registerPageTheme"
+    android:background="@color/lightYellow">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create an Account "
+        android:fontFamily="@font/indigo_daisy"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="italic"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Get Onboard"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custombutton_light"
+        android:textColorHint="@color/blackBlue"
+        android:textColor="@color/blackBlue"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:id="@+id/fullname"
+        android:hint="Full Name"
+        android:maxLines="1"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custombutton_light"
+        android:textColorHint="@color/blackBlue"
+        android:textColor="@color/blackBlue"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        android:hint="Email Id"
+        android:maxLines="1"/>
+
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custombutton_light"
+        android:textColorHint="@color/blackBlue"
+        android:textColor="@color/blackBlue"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:id="@+id/password"
+        android:hint="Password"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custombutton_light"
+        android:textColorHint="@color/blackBlue"
+        android:textColor="@color/blackBlue"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:id="@+id/conPassword"
+        android:hint="Confirm Password"
+        android:maxLines="1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerUser"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custombutton2_light"
+        android:text="Register"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ?"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/blackBlue"/>
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/loginNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login Now"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#EA907A"/>
+    </LinearLayout>
+
+</LinearLayout>

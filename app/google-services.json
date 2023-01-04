@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1021511212563",
+    "project_id": "ontimeattendance-e1735",
+    "storage_bucket": "ontimeattendance-e1735.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021511212563:android:155e1243a967395288e9e6",
+        "android_client_info": {
+          "package_name": "com.education.ontimeattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021511212563-s89d15sh01u37ffs5b59fajhjaomu0kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBDdaovy1zIjxUdzsb5BHCyLfqE16YK4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021511212563-s89d15sh01u37ffs5b59fajhjaomu0kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
