@@ -1,72 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeLayout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:theme="@style/homeScreenTheme"
-    android:background="@color/lightGreyBlue">
+    android:theme="@style/homeScreenTheme">
 
-
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:layout_gravity="top|start"
-        android:gravity="top"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:fontFamily="@font/indigo_daisy"
-        android:textSize="60dp"
-        android:textColor="@color/navyBlue"
-        />
+        android:id="@+id/greetingHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:layout_gravity="top|start"
+                android:gravity="top"
+                android:fontFamily="@font/aileronsemibold"
+                android:textSize="35dp"
+                android:textColor="@color/black"
+                android:id="@+id/greetings"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:fontFamily="@font/aileronregular"
+                android:textSize="30dp"
+                android:textColor="@color/navyBlue"
+                android:id="@+id/fullName"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/greetingHeader">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="top|start"
-        android:gravity="top"
-        android:layout_marginTop="-5dp"
-        android:layout_marginLeft="80dp"
-        android:fontFamily="@font/indigo_daisy"
-        android:textSize="50dp"
-        android:textColor="@color/black"
-        android:id="@+id/usernameDisp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        >
 
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/custombutton3"
+            android:backgroundTint="@color/darkBlue"
+            android:text="My Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/offWhite" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:background="@drawable/custombutton"
-        android:layout_marginTop="300dp"
-        android:text="My Profile"
-        android:textAllCaps="false"
-        android:id="@+id/showProfile"
-        android:textColor="@color/offWhite"
-        android:backgroundTint="@color/darkBlue"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showQR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="150dp"
+            android:height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/custombutton3"
+            android:backgroundTint="@color/darkBlue"
+            android:text="Show QR"
+            android:textAllCaps="false"
+            android:textColor="@color/offWhite" />
+    </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:background="@drawable/custombutton"
-        android:layout_marginTop="30dp"
-        android:text="Show QR"
-        android:textAllCaps="false"
-        android:id="@+id/showQR"
-        android:textColor="@color/offWhite"
-        android:backgroundTint="@color/darkBlue"
-        />
+    </RelativeLayout>
 
 
 
 
-</LinearLayout>
+
+</RelativeLayout>
