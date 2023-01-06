@@ -5,11 +5,11 @@
         <item name="background">@color/backgroundColorLight</item>
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/darkBlue</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/darkBlue</item>
         <!-- Status bar color. -->
 <!--        <item name="android:statusBarColor">?attr/background</item>-->
         <!-- Customize your theme here. -->
@@ -38,7 +38,7 @@
         <item name="backgroundColor">@color/lightPurple</item>
     </style>
     <style name="homeScreenTheme2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="android:statusBarColor">@color/lightGreen</item>
+        <item name="android:statusBarColor">@color/darkBlue</item>
         <item name="backgroundColor">@color/lightGreen</item>
     </style>
 </resources>

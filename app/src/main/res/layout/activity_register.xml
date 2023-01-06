@@ -96,6 +96,7 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/custombutton2_light"
         android:text="Register"
+        android:textColor="@color/black"
         android:textAllCaps="false"/>
 
     <LinearLayout
@@ -109,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account ?"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/aileronregular"
             android:textColor="@color/blackBlue"/>
         <TextView
             android:layout_marginStart="5dp"
@@ -118,7 +119,7 @@
             android:layout_height="wrap_content"
             android:text="Login Now"
             android:textStyle="bold"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/aileronsemibold"
             android:textColor="#EA907A"/>
     </LinearLayout>
 
