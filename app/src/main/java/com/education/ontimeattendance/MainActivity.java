@@ -126,14 +126,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.showProfile:
                 startActivity(new Intent(this, profile.class));
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                 break;
         }
         switch (view.getId()){
             case R.id.showQR:
                 startActivity(new Intent(this, showQRcode.class));
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 break;
         }
     }
+
     @Override
     public void onBackPressed() {
 

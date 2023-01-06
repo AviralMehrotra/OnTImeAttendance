@@ -25,7 +25,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView registerNow;
+    private long pressedTime;
+    private TextView registerNow, forgotPassword;
     private EditText editEmail, editPassword;
     private Button signIn;
 
@@ -46,6 +47,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         registerNow= (TextView)findViewById(R.id.registerNow);
         registerNow.setOnClickListener(this);
 
+        forgotPassword= (TextView)findViewById(R.id.forgotPassword);
+        forgotPassword.setOnClickListener(this);
+
         signIn= (Button) findViewById(R.id.signIn);
         signIn.setOnClickListener(this);
 
@@ -61,16 +65,34 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     }
 
     @Override
+    public void onBackPressed() {
+
+        if (pressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finish();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.registerNow:
-                startActivity(new Intent(this, register.class));
+                startActivity(new Intent(Login.this, register.class));
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 break;
 
             case R.id.signIn:
                 userLogin();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                 break;
 
+            case R.id.forgotPassword:
+                startActivity(new Intent(this, ForgotPassword.class));
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+                break;
         }
     }
 
@@ -112,6 +134,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
                     if(user.isEmailVerified()){
                         startActivity(new Intent(Login.this, MainActivity.class));
+                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                         Toast.makeText(Login.this, "Logged In Successfully !", Toast.LENGTH_SHORT).show();
                     }
                     else{

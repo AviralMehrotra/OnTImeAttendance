@@ -56,13 +56,25 @@ public class register extends AppCompatActivity implements View.OnClickListener 
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(register.this, Login.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        finish();
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.loginNow:
                 startActivity(new Intent(this, Login.class));
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                 break;
             case R.id.registerUser:
                 registerUser();
+                startActivity(new Intent(this, Login.class));
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                 break;
         }
     }

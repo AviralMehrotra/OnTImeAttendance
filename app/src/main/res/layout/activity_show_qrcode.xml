@@ -7,7 +7,6 @@
     tools:context=".showQRcode"
     android:gravity="center"
     android:orientation="vertical"
-    android:theme="@style/homeScreenTheme2"
     android:background="@drawable/qrbg">
 
     <ImageView
