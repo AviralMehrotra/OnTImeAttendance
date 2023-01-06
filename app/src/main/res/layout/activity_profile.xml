@@ -7,7 +7,8 @@
     android:background="@color/backgroundColorLight"
     android:orientation="vertical"
     tools:context=".profile"
-    android:theme="@style/loginPageTheme">
+    android:theme="@style/loginPageTheme"
+    >
 
 
     <RelativeLayout

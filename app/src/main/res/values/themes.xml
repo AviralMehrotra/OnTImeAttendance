@@ -3,17 +3,18 @@
     <style name="Theme.OnTImeAttendance" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="background">@color/backgroundColorLight</item>
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/navyBlue</item>
+        <item name="colorPrimaryVariant">@color/navyBlue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-<!--        <item name="android:statusBarColor">?attr/background</item>-->
-        <!-- Customize your theme here. -->
     </style>
+        <!-- Status bar color. -->
+    <style name="CustomTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+        <!-- Customize your theme here. -->
+
     <style name="newColorTheme1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/lightYellow</item>
     </style>
@@ -38,4 +39,6 @@
         <item name="android:statusBarColor">@color/lightGreen</item>
         <item name="backgroundColor">@color/lightGreen</item>
     </style>
+
+
 </resources>

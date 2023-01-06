@@ -2,6 +2,7 @@
 <resources>
     <color name="purple_100">#BAABDA</color>
     <color name="purple_200">#FFBB86FC</color>
+    <color name="afternoonSky">#8d1f7e</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="dark_800">#453C67</color>
@@ -16,10 +17,20 @@
     <color name="lightGreen">#E1FFEE</color>
     <color name="lightPurple">#D9D7F1</color>
     <color name="offWhite">#F9F7F7</color>
+    <color name="fadedWhite">#F3F6FF</color>
     <color name="lightGreyBlue">#DBE2EF</color>
     <color name="darkBlue">#3F72AF</color>
     <color name="navyBlue">#112D4E</color>
     <color name="grey">#767676</color>
+    <color name="paleYellow">#ffdc90</color>
+    <color name="mudYellow">#fcb077</color>
+    <color name="whitePurple">#dbdffe</color>
+    <color name="nightGreeting">#A6C6D1</color>
+    <color name="nightName">#CEEFF2</color>
+    <color name="transparent">#00000000</color>
+
+
+
 
 
 
