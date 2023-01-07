@@ -56,7 +56,7 @@ public class profile extends AppCompatActivity {
 
         final TextView textFullname = (TextView) findViewById(R.id.fullName);
         final TextView textEmail = (TextView) findViewById(R.id.emailAddress);
-
+        final TextView textPhone = (TextView) findViewById(R.id.phoneNumber);
         final TextView dispName = (TextView) findViewById(R.id.dispName);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -67,10 +67,12 @@ public class profile extends AppCompatActivity {
                 if(userProfile != null){
                     String fullName = userProfile.fullname;
                     String email = userProfile.email;
+                    String phoneNo = userProfile.phoneNumber;
 
                     textFullname.setText(fullName);
                     textEmail.setText(email);
                     dispName.setText(fullName);
+                    textPhone.setText(phoneNo);
                 }
             }
 

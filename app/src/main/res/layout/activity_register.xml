@@ -60,6 +60,19 @@
         android:hint="Email Id"
         android:maxLines="1"/>
 
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custombutton_light"
+        android:textColorHint="@color/blackBlue"
+        android:textColor="@color/blackBlue"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:inputType="phone"
+        android:id="@+id/phoneNumber"
+        android:hint="Phone Number"
+        android:maxLines="1"/>
+
 
     <EditText
         android:layout_width="350dp"

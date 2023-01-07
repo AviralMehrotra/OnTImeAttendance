@@ -143,13 +143,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
+                    android:text="Phone Number"
+                    android:textStyle="bold"
+                    android:textColor="@color/blackBlue"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="1234567890"
+                    android:textColor="@color/navyBlue"
+                    android:textSize="21dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey"
+                    />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Class"
                     android:textStyle="bold"
                     android:textColor="@color/blackBlue"
                     android:textSize="23dp" />
 
                 <TextView
-                    android:id="@+id/age"
+                    android:id="@+id/klass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"

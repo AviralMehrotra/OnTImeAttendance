@@ -39,6 +39,7 @@ public class showQRcode extends AppCompatActivity {
     Button submitBtn;
     String fullName;
     String emailId;
+    String phoneNumm;
 
     private FirebaseAuth mAuth;
 
@@ -69,6 +70,7 @@ public class showQRcode extends AppCompatActivity {
                 if(userProfile != null){
                      fullName = userProfile.fullname;
                      emailId = userProfile.email;
+                     phoneNumm = userProfile.phoneNumber;
                 }
             }
             @Override
@@ -96,7 +98,7 @@ public class showQRcode extends AppCompatActivity {
                 String dateTime = simpleDateFormat.format(calendar.getTime());
                 MultiFormatWriter writer = new MultiFormatWriter();
                 qrCode= findViewById(R.id.qrCode);
-                qrString = fullName+"  "+ emailId+ "  "+dateTime;
+                qrString = fullName+"  "+ phoneNumm +" "+emailId+ "  "+dateTime;
                 try {
                     BitMatrix matrix = writer.encode(qrString, BarcodeFormat.QR_CODE, 300, 300);
 

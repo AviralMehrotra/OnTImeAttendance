@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class register extends AppCompatActivity implements View.OnClickListener {
 
     private TextView registerUser;
-    private EditText editFullName, editEmail, editPassword, editConPassword;
+    private EditText editFullName, editEmail, editPhoneNo,editPassword, editConPassword;
     private TextView loginNow;
 
     private FirebaseAuth mAuth;
@@ -50,6 +50,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         editEmail= (EditText) findViewById(R.id.email);
         editPassword= (EditText) findViewById(R.id.password);
         editConPassword= (EditText) findViewById(R.id.conPassword);
+        editPhoneNo= (EditText) findViewById(R.id.phoneNumber);
 
         loginNow= (TextView) findViewById(R.id.loginNow);
         loginNow.setOnClickListener(this);
@@ -84,6 +85,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         String password = editPassword.getText().toString().trim();
         String conPassword = editConPassword.getText().toString().trim();
         String fullname = editFullName.getText().toString().trim();
+        String phoneNo= editPhoneNo.getText().toString().trim();
 
         if(fullname.isEmpty()){
             editFullName.setError("Full Name is required !");
@@ -100,6 +102,18 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             editEmail.setError("Enter a valid Email Id !");
             editEmail.requestFocus();
+            return;
+        }
+
+        if(phoneNo.isEmpty()){
+            editPhoneNo.setError("Phone Number is required !");
+            editPhoneNo.requestFocus();
+            return;
+        }
+
+        if(!Patterns.PHONE.matcher(phoneNo).matches()){
+            editPhoneNo.setError("Enter a valid Phone Number !");
+            editPhoneNo.requestFocus();
             return;
         }
 
@@ -130,7 +144,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(fullname, email);
+                            User user = new User(fullname, email, phoneNo);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
